@@ -1,0 +1,76 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+\usepackage{indentfirst}
+
+% Пакет для расширения возможностей
+% работы с формулами
+\usepackage{amsmath}
+
+% Расширение набора
+% математических символов
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+\section{Запись формул}
+Посреди текста формулу можно включить таким образом: $a = 15x$, блаблабла бла бла блаблаблабла бла бла. Если же нужно выделить формулу на отдельной строке, то используется следующий синтаксис:
+\[ X = 0.1 a. \]
+
+Такого же результата можно добиться, используя окружение <<equation*>>:
+
+\begin{equation*}
+X = 0.1 a.
+\end{equation*}
+
+Если же мы хотим формулу пронумеровать, то будем использовать без звёздочки:
+
+\begin{equation}
+I = UR.
+\end{equation}
+
+Используя в коде <<label>> мы сможем легко сослаться на нужную формулу по её номеру, например, на формулу \eqref{our_formula}.
+
+\begin{equation}\label{our_formula}
+E = mgh.
+\end{equation}
+
+\section{Часто встречаемые функции при работе с формулами}
+Степень и индекс:
+\[ a^2 = a_x^2 + a^2_y + a_z^2, \]
+\[ a^{15xyz}_{zxy} .\]
+
+Дроби:
+\[ \frac{12}{13}. \]
+
+Красивые скобки и знак умножения:
+\[ \left( \frac{a^b}{c_d} \right) = \left[ 15 \cdot \frac{1}{2} \right]. \]
+
+С обычными скобками было бы так:
+\[ ( \frac{a^b}{c_d} ) = [ 15 \cdot \frac{1}{2} ].  \]
+
+Функции (для сравнения -- слева использование без команды):
+\[ sin(x) + \sin(x) = \ln(5) - \frac{15}{\arccos(0.04)} \cdot \sqrt[6]{10}. \]
+
+Необычные шрифты (для этого, в частности, нам нужен был <<amsfonts>>):
+\[ \mathbb{A} + \mathit{D} + \mathbf{T}. \]
+
+Греческие символы (тильда в формуле явно задаёт пробел между символами):
+\[ \lambda,~\Delta,~\delta,~\varepsilon,~\omega. \]
+
+Суммы и интегралы:
+\[ \sum^{5000}_{n = 1},~ \int,~ \int^1_0, \int\limits^1_0\]
+
+Математические значки:
+\[ \Rightarrow \infty \triangle \times \div \in \]
+
+% Полный список символов можно нуйти тут: https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols
+
+Значок вектора, точка сверху и двойная точка:
+\[ \vec{a}, \dot{a}, \ddot{a} \]
+
+
+
+\end{document}
