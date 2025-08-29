@@ -7,4 +7,5 @@
 
 + [third_day](https://github.com/TheEntityCircle/boopcamp-python/tree/master/2025/third_day) — 
 третий день. Здесь можно найти python скрипты, позволяющие подобрать коэффиценты функции по 
-заданным значениям, а также базовые возможности языка вёрстки LaTeX.
+заданным значениям, а также базовые возможности языка вёрстки LaTeX и [пример](https://github.com/TheEntityCircle/boopcamp-python/tree/master/2025/third_day/18_educational_lab) обработки
+данных и составления отчёта по лабораторной работе.

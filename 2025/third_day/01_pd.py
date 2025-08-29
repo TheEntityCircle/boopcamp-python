@@ -26,13 +26,14 @@ print(type(np_data))
 
 #%%
 excel_data = pd.read_excel('./data_files/data.xlsx',
-                  header=None).to_numpy()
+                           header=None).to_numpy()
 print(excel_data) # Аналогичную операцию проделали с данными в .xlsx файле
 
 #%%
 # Попробуем считать файл с отвратительной разметкой,
 # data = pd.read_csv('./data_files/really_bad.csv') # ошибка
-data = pd.read_csv('./data_files/really_bad.csv', skiprows=10)
+data = pd.read_csv('./data_files/really_bad.csv',
+                   skiprows=10)
 print(data) # Хотя бы считалось, но внутри каша
 
 #%%
