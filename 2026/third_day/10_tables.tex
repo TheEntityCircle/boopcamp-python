@@ -1,0 +1,93 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+\usepackage{indentfirst}
+
+
+\begin{document}
+\section{Вставка таблиц}
+
+Вставим простую таблицу (в редакторе TeXMaker удобно использовать вкладку Помощник -> ,быстрая таблица, также \\ удобен сайт https://tablesgenerator.com/):
+
+\begin{tabular}{|c|c|}
+\hline 
+Раз & $\frac{1}{51}$ \\  \hline 
+Два & 5700 \\  \hline 
+\end{tabular} 
+
+Таблица с разным размером столбцов и разными выравниваниями внутри столбца:
+\begin{itemize}
+	\item p -- фиксированная ширина столбца, выравнивание слева,
+	\item l -- автоматическая ширина столбца, выравнивание слева,
+	\item r -- аналогично l, но справа,
+	\item с -- автоматическая ширина, выравнивание по центру,
+\end{itemize}
+сама таблица выравнена по центру:
+\begin{center}
+\begin{tabular}{|p{2cm}|l|r|c|p{90pt}|p{0.08\textwidth}|}
+\hline 
+7 & 9 & 15129914 & 52 & 42 & 555 \\ 
+\hline 
+0 & 12412444 & 33 & 2 & 9103920 & 1000 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\section{Красивые таблицы}
+И на созданную таким образом таблицу \ref{our_table} можно сослаться, аналогично ссылкам на рисунки:
+
+\begin{table}[h!]
+    \centering
+    \caption{Тут можно подписать таблицу.}\label{our_table}
+	\begin{tabular}{ |c|c|c|}
+ \hline
+ Значение 1 & 15 & 11 \\ \hline
+ Значение 2 & 13 & 14\\ \hline
+ Значение 3 & 15 & 017 \\ \hline
+ Значение 8 & 15 & -2 \\ \hline
+	\end{tabular}
+\end{table}
+
+Можно сделать и таблицу без разделителей строк:
+\begin{table}[h!]
+    \centering
+    \caption{Без разделителей строк.}
+	\begin{tabular}{ |c|c|c|}
+ \hline
+ Значение 1 & 15 & 11 \\
+ Значение 2 & 13 & 14\\ 
+ Значение 3 & 15 & 017 \\ 
+ Значение 8 & 15 & -2 \\ \hline
+	\end{tabular}
+\end{table}
+
+\newpage
+Аналогично со столбцами:
+\begin{table}[h!]
+    \centering
+    \caption{Без разделителей столбцов.}
+	\begin{tabular}{ |ccc|}
+ \hline
+ Значение 1 & 15 & 11 \\ \hline
+ Значение 2 & 13 & 14\\ \hline
+ Значение 3 & 15 & 017 \\ \hline
+ Значение 8 & 15 & -2 \\ \hline
+	\end{tabular}
+\end{table}
+
+
+Внешние края тоже можно убрать:
+\begin{table}[h!]
+    \centering
+    \caption{Тут можно подписать таблицу.}
+	\begin{tabular}{ ccc}
+ Значение 1 & 15 & 11 \\ 
+ Значение 2 & 13 & 14\\ 
+ Значение 3 & 15 & 017 \\ 
+ Значение 8 & 15 & -2 \\
+	\end{tabular}
+\end{table}
+
+\end{document}
